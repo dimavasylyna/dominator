@@ -1,6 +1,143 @@
 .header {
+	min-height: 700px;
+	background-image: url(../img/header__bg.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	margin-bottom: 300px;
+	position: relative;
+	z-index: 0;
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+	}
+	.logo {
+	  display: flex;
+	  align-items: center;
+	  padding-left: 72px;
+	  position: relative;
+	}
+	.logo__sign {
+	  	width: 67px;
+		height: 87px;
+		position: absolute;
+		left: -17px;
+		top: -15px;
+	  svg {
+	  	max-width: 100%;
+	  	max-height: 100%;
+	  }
+	}
+	.logo__text {
+		font-size: 14px;
+		line-height: 1.3;
+		color: #999;
+	}
+	.logo__name {
+	  max-width: 114px;
+	  margin-top: 20px;
+	  svg {
+	  	max-width: 100%;
+	  	max-height: 100%;
+	  }
+	}
+	.nav {
+		max-width: 282px;
+		width: 100%;
+	}
+	.nav__list {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 20px;
+		align-items: flex-start;
+	}
+	.nav__item {
+		color: rgba(249, 249, 250, 0.6);
+		font-weight: 400;
+		font-size: 15px;
+		max-width: 82px;
+		position: relative;
+		padding-top: 30px;
+		cursor: pointer;
+		&:hover {
+			color: rgba(249, 249, 250, 0.8);
+			a {
+				border-bottom: none;
+			}
+			[class*='st'] {
+				fill: #ef694b;
+			}
+		}
+		a {
+			border-bottom: 1px dotted rgba(249, 249, 250, 0.6);
+		}
+	}
+	.nav__icon {
+		width: 30px;
+		position: absolute;
+		top: 0;
+		cursor: pointer;
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+		font-size: 65px;
+		font-weight: 900;
+		color: $text-yellow;
+		margin-bottom: 20px;
+		&-small {
+			display: block;
+			font-size: 30px;
+			font-weight: 700;
+			color: #fff;
+			line-height: 32px;
+		}
+	}
+	&__item {
+		padding-left: 40px;
+		position: relative;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 26px;
+		color: #fff;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 31px;
+			height: 32px;
+			transform: translateY(-50%);
+			background-image: url(../img/up-icon.svg);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-size: contain;
+		}
+		&:nth-of-type(n + 2) {
+			margin-top: 20px;
+		}
+		b {
+			font-size: 26px;
+			font-weight: 700;
+			color: $text-yellow;
+			display: block;
+		}
+	}
 
+	&__woman {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
+	
 }
+
+
+
 @media screen and (max-width: 1190px){
   
 }
