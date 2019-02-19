@@ -1,27 +1,45 @@
 .header {
 	min-height: 700px;
-	background-image: url(../img/header__bg.jpg);
+	// background-image: url(../img/header__bg.jpg);
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 	margin-bottom: 300px;
 	position: relative;
 	z-index: 0;
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		background-image: url(../img/bg-sign.png), url(../img/header__bg.jpg);
+		background-repeat: no-repeat;
+		background-position: calc(50% + 46px) 0%, calc(50% + 10px) -25px;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		clip-path: polygon(0 0, 100% 0, 100% 87%, 0 93.8%);
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 0 93.8%);clip-path: polygon(0 0, 100% 0, 100% 87%, 0 93.8%);
+	}
 	&__top {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 60px;
+		margin-bottom: 39px;
 	}
 	.logo {
 	  display: flex;
-	  align-items: center;
+	  align-items: flex-start;
 	  padding-left: 72px;
 	  position: relative;
+	  [class*='st'] {
+				fill: #999999;
+			}
 	}
 	.logo__sign {
 	  	width: 67px;
 		height: 87px;
 		position: absolute;
-		left: -17px;
+		left: -2px;
 		top: -15px;
 	  svg {
 	  	max-width: 100%;
@@ -36,6 +54,7 @@
 	.logo__name {
 	  max-width: 114px;
 	  margin-top: 20px;
+	  height: 26px;
 	  svg {
 	  	max-width: 100%;
 	  	max-height: 100%;
@@ -44,17 +63,21 @@
 	.nav {
 		max-width: 282px;
 		width: 100%;
+		[class*='st'] {
+				fill: #e7bc85;
+			}
 	}
 	.nav__list {
 		display: flex;
 		justify-content: space-between;
-		margin-top: 20px;
+		padding-top: 21px;
 		align-items: flex-start;
 	}
 	.nav__item {
 		color: rgba(249, 249, 250, 0.6);
 		font-weight: 400;
 		font-size: 15px;
+		line-height: 1.1;
 		max-width: 82px;
 		position: relative;
 		padding-top: 30px;
@@ -62,21 +85,35 @@
 		&:hover {
 			color: rgba(249, 249, 250, 0.8);
 			a {
-				border-bottom: none;
+				background: none;
+				
 			}
 			[class*='st'] {
 				fill: #ef694b;
 			}
 		}
 		a {
-			border-bottom: 1px dotted rgba(249, 249, 250, 0.6);
+			// border-bottom: 1px dotted rgba(249, 249, 250, 0.6);
+			background: repeating-linear-gradient(to right, #7b7b7b 0px, #7b7b7b 1px, rgba(0,0,0,0) 1px, rgba(0,0,0,0) 2px);
+		    background-repeat: repeat-x;
+		    background-position: 0 94%;
+		    background-size: 2px 1px;
 		}
 	}
 	.nav__icon {
-		width: 30px;
+		width: 23px;
+		height: 22px;
 		position: absolute;
 		top: 0;
 		cursor: pointer;
+		&--2 {
+			width: 20px;
+			height: 24px;
+		}
+		&--3 {
+			width: 20px;
+			height: 26px;
+		}
 	}
 	&__content {
 		display: flex;
@@ -84,24 +121,28 @@
 	}
 	&__title {
 		font-size: 65px;
+		line-height: 1.2;
 		font-weight: 900;
 		color: $text-yellow;
-		margin-bottom: 20px;
+		margin-bottom: 37px;
 		&-small {
 			display: block;
 			font-size: 30px;
 			font-weight: 700;
 			color: #fff;
 			line-height: 32px;
+			letter-spacing: 1.5px;
+			margin-top: 3px;
 		}
 	}
 	&__item {
-		padding-left: 40px;
+		padding-left: 56px;
 		position: relative;
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 26px;
 		color: #fff;
+		line-height: 1;
 		&::before {
 			content: '';
 			display: block;
@@ -116,20 +157,51 @@
 			background-position: 50%;
 			background-size: contain;
 		}
-		&:nth-of-type(n + 2) {
-			margin-top: 20px;
+		&:nth-of-type(2) {
+			margin-top: 30px;
+		}
+		&:nth-of-type(3) {
+			margin-top: 30px;
 		}
 		b {
 			font-size: 26px;
 			font-weight: 700;
 			color: $text-yellow;
 			display: block;
+			line-height: 1;
+			margin-bottom: 5px;
 		}
 	}
-
+	.form {
+		margin-top: 38px;
+		&::after {
+			display: none;
+		}
+	}
+	.price {
+		position: relative;
+		margin-bottom: 28px;
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			background-image: url(../img/form-line.svg);
+			background-position: 50%;
+			width: 230px;
+			height: 20px;
+			background-repeat: no-repeat;
+			bottom: -23px;
+			left: -7px;
+		}
+	}
+	&__prod {
+		position: relative;
+	    margin-top: 173px;
+    	left: 19px;
+	}
 	&__woman {
 		position: absolute;
-		left: 50%;
+		left: calc(50% + 23px);
 		transform: translateX(-50%);
 		z-index: -1;
 	}

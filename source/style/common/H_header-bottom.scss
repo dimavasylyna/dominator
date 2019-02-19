@@ -1,5 +1,9 @@
 section.header {
-
+	.form {
+		&::after {
+			display: block;
+		}
+	}
 }
 @media screen and (max-width: 1190px){
   
