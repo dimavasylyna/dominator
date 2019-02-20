@@ -341,6 +341,9 @@
 			bottom: 0;
 			transform: translateX(-50%);
 		}
+		&__img {
+			display: none;
+		}
 		&__woman {
 			display: none;
 		}
@@ -355,6 +358,9 @@
 		}
 		.logo {
 			display: none;
+		}
+		.nav__item {
+			text-align: center;
 		}
 		.nav__icon {
 			left: 50%;
