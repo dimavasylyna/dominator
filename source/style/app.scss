@@ -108,8 +108,8 @@ input::-ms-clear {
     background-repeat: no-repeat;
     height: 288px;
     width: 52px;
-    top: 109px;
-    right: -38px;
+    top: 116px;
+    right: -35px;
   }
   &__title {
     font-size: 23px;
@@ -121,7 +121,8 @@ input::-ms-clear {
     }
   }
   &__lastpack {
-    margin: 10px 0;
+    margin-bottom: 17px;
+    line-height: 1;
   }
   &__timer {
     p {
@@ -133,7 +134,7 @@ input::-ms-clear {
   &__label {
     position: relative;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     max-width: 220px;
     margin-left: auto;
     margin-right: auto;
@@ -147,7 +148,7 @@ input::-ms-clear {
       background-repeat: no-repeat;
       top: 50%;
       transform: translateY(-50%);
-      left: 10px;
+      left: 19px;
     }
     &--tel::before {
       background-image: url(../img/tel.svg);
@@ -159,17 +160,18 @@ input::-ms-clear {
     border: none;
     outline: none;
     background-color: #e5e3e3;
-    padding: 18px 10px;
+    padding: 20px 15px;
     font-size: 16px;
     font-weight: 400;
-    padding-left: 40px;
+    padding-left: 50px;
   }
   .price__footnote {
     color: #666;
     font-size: 15px;
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 13px;
     margin-bottom: 10px;
+    color: rgba(102,102,102,0.7);
   }
   &__pay-after {
     font-size: 15px;
@@ -177,8 +179,10 @@ input::-ms-clear {
     color: #222;
     background-image: url(../img/coins.png);
     background-size: 22px 19px;
-    background-position: 0 50%;
+    background-position: 9px 50%;
     background-repeat: no-repeat;
+    margin-top: 28px;
+    padding-left: 25px;
   }
 }
   
@@ -300,6 +304,7 @@ input::-ms-clear {
   box-shadow: inset 0 -3px 0 #af503a;
   transition: 0.1s;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+ 
   &:hover {
     background-color: #f35936;
     box-shadow: inset 0 -3px 0 #a13a23;
