@@ -343,6 +343,7 @@
 		&__title {
 			font-size: 50px;
 			text-align: center;
+			margin-bottom: 24px;
 			&-small {
 				font-size: 20px;
 			}
@@ -364,6 +365,25 @@
 	}
 }
 @media screen and (max-width: 479px){
-
+	.header {
+		&__title {
+			font-size: 46px;
+			margin-bottom: 22px;
+			&-small {
+				font-size: 18px;
+				margin-top: 4px;
+				br {
+					display: block;
+				}
+			}
+		}
+		&__item {
+			margin-left: 0;
+			font-size: 16px;
+			b {
+				font-size: 19px;
+			}
+		}
+	}
 }
 
