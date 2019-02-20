@@ -1,9 +1,69 @@
 section.header {
-	.form {
-		&::after {
-			display: block;
-		}
+	padding-bottom: 100px;
+	.before {
+		 width: 100%;
+    height: 100px;
+    position: absolute;
+     top: -39px;
+    transform: rotate(-1deg);
+    left: 0;
+    overflow:  hidden;
 	}
+  .before::before {
+	  content: '';
+	  display: block;
+	  position: absolute;
+	  width: 110%;
+	  height: 100px;
+	  background-image: url(../img/pattern.png);
+	  background-position: 0 0;
+	  top: -39px;
+	  transform: rotate(-1deg);
+	  left: 0;
+ 	} 
+  .after {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+     bottom: -30px;
+    transform: rotate(-1.6deg);
+    left: 0;
+    overflow:  hidden;
+  }
+  .after::before {
+    height: 150%;
+    width: 150%;
+    top: -50px;
+    left: 0;
+     content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../img/pattern.png);
+    background-position: 0 -7px;
+    transform: rotate(1deg);
+  }
+  .header__img {
+  	overflow: hidden;
+  	height: 774px;
+
+    width: 899px;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: calc(50% + 22px);
+	transform: translateX(-50%) rotate(-2deg);
+	z-index: -1;
+  }
+  .header__woman {
+  	position: absolute;
+  	top: auto;
+  	bottom: 0;
+  }
+  .form {
+	&::after {
+		display: block;
+	}
+  }
 }
 @media screen and (max-width: 1190px){
   
