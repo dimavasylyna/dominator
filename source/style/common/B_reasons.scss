@@ -1,15 +1,165 @@
-.symptoms {
+.reasons {
+  padding-top: 90px;
+  padding-bottom: 60px;
 
-}
-@media screen and (max-width: 1190px){
-  
-}
-@media screen and (max-width: 1023px){
+  &__title {
+    margin-bottom: 15px;
+    font-weight: 900;
 
-}
-@media screen and (max-width: 767px){
+    & br {
+      display: none;
 
-}
-@media screen and (max-width: 479px){
+      @media (min-width: 768px) and (max-width: 1024px) {
+        display: initial;
+      }
+    }
+  }
 
+  &__subtitle {
+    margin-bottom: 37px;
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      max-width: 570px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    &:nth-child(2n) {
+      margin-top: 25px;
+
+      @media (max-width: 1024px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    max-width: 270px;
+    margin: 0 auto;
+    padding-top: 25px;
+
+    @media (min-width: 1024px) and (max-width: 1190px) {
+      max-width: 230px;
+    }
+
+    @media (max-width: 1190px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(-50%);
+
+    &--triangle {
+      width: 49px;
+      height: 44px;
+      padding-top: 5px;
+      background-image: url("../img/reason-icon-triangle.svg");
+    }
+
+    &--ruler {
+      width: 46px;
+      height: 50px;
+      padding-top: 5px;
+      background-image: url("../img/reason-icon-ruler.svg");
+    }
+
+    &--shape {
+      width: 51px;
+      height: 51px;
+      background-image: url("../img/reason-icon-shape.svg");
+    }
+
+    &--talk {
+      width: 49px;
+      height: 42px;
+      background-image: url("../img/reason-icon-talk.svg");
+    }
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #c8cacb;
+  }
+
+  &__description {
+    position: relative;
+    padding-top: 18px;
+    font-weight: 500;
+    text-align: center;
+
+    @media (min-width: 1024px) and (max-width: 1190px) {
+      font-size: 17px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 29px;
+      height: 4px;
+      background-color: #e7bc85;
+      transform: translateX(-50%);
+    }
+
+    & .gray {
+      font-weight: 400;
+    }
+  }
+
+  &__conclusion {
+    position: relative;
+    margin-top: 16px;
+    margin-bottom: 26px;
+    padding-top: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      display: block;
+      width: 100%;
+      height: 16px;
+      background-image: url("../img/border-triangle-decor.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 1172px 16px;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__btn {
+    max-width: 280px;
+  }
 }
