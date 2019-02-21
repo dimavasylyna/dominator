@@ -5,6 +5,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 //кольори тексту
 $text-yellow: #caa371;
 $text-red: #ef694b;
+$text-gray: #444444;
 
 * {
   box-sizing: border-box;
@@ -65,12 +66,29 @@ input::-ms-clear {
   margin-top: 18px;
 }
 
+// nick
+.conclusion {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+// ---
+
 .red {
   color: $text-red;
 }
+
+// nick
+.gray {
+  color: $text-gray;
+}
+
 .yellow {
   color: $text-yellow;
 }
+// ---
 
 .form {
   width: 270px;
@@ -306,7 +324,9 @@ input::-ms-clear {
   box-shadow: inset 0 -3px 0 #af503a;
   transition: 0.1s;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  // nick
+  text-align: center;
+  // ---
   &:hover {
     background-color: #f35936;
     box-shadow: inset 0 -3px 0 #a13a23;
@@ -330,7 +350,7 @@ input::-ms-clear {
 
 
 
-@media screen and (max-width: 1190px){
+@media screen and (max-width: 1190px) {
   .container {
     width: 1024px;
     padding-right: 10px;
@@ -343,6 +363,15 @@ input::-ms-clear {
     font-size: 36px;
     line-height: 1.2;
   }
+  // nick
+  .subtitle {
+    font-size: 26px;
+  }
+
+  .conclusion {
+    font-size: 28px;
+  }
+  // ---
 }
 @media screen and (max-width: 1023px){
   .container {
@@ -354,6 +383,15 @@ input::-ms-clear {
   .title {
     font-size: 32px;
   }
+  // nick
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .conclusion {
+    font-size: 26px;
+  }
+  // ---
 }
 @media screen and (max-width: 767px){
   .container {
@@ -365,6 +403,15 @@ input::-ms-clear {
   .block {
     padding: 30px 0;
   }
+  // nick
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .conclusion {
+    font-size: 24px;
+  }
+  // ---
 }
 @media screen and (max-width: 479px){
   .container {
@@ -376,5 +423,14 @@ input::-ms-clear {
   .title {
     font-size: 24px;
   }
+  // nick
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .conclusion {
+    font-size: 22px;
+  }
+  // ---
 }
 
