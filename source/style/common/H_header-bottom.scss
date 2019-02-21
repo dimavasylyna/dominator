@@ -1,15 +1,142 @@
 section.header {
-
+	padding-bottom: 100px;
+	padding-top: 63px;
+	background-position: 55% 45%, 49% -24px;
+	.before {
+		 width: 110%;
+    height: 100px;
+    position: absolute;
+     top: -40px;
+    transform: rotate(-0.6deg);
+    left: -5px;
+    overflow:  hidden;
+    z-index: 2;
+	}
+  .before::before {
+	  content: '';
+	  display: block;
+	  position: absolute;
+	  width: 100%;
+	  height: 100px;
+	  background-image: url(../img/pattern.png);
+	  background-position: 0 0;
+	  top: -39px;
+	  transform: rotate(-1deg);
+	  left: 0;
+ 	} 
+  .after {
+    width: 105%;
+    height: 100px;
+    position: absolute;
+     bottom: -17px;
+    transform: rotate(-1.1deg);
+    left: 0;
+    overflow:  hidden;
+  }
+  .after::before {
+    height: 150%;
+    width: 150%;
+    top: -50px;
+    left: 0;
+     content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../img/pattern.png);
+    background-position: 0 -7px;
+    transform: rotate(1.1deg);
+  }
+  .header__content {
+  	padding-bottom: 15px;
+  }
+  .header__img {
+  	overflow: hidden;
+  	height: 774px;
+    width: 899px;
+    position: absolute;
+    top: 19px;
+    left: calc(50% + 22px);
+	z-index: -1;
+  }
+  .header__woman {
+  	position: absolute;
+  	top: auto;
+  	bottom: 0;
+  }
+  .form {
+  	margin-top: 7px;
+  	padding-top: 33px;
+  	padding-bottom: 20px;
+	&::after {
+		display: block;
+	}
+	&__lastpack {
+		margin-top: 0;
+		font-weight: 400;
+	}
+  }
+  .price {
+  	margin-bottom: 9px;
+  }
+  .price::after {
+  	display: none;
+  }
+}
+@media screen and (max-width: 1260px){
+  section.header {
+  	.form::after {
+  		display: none;
+  	}
+  }
 }
 @media screen and (max-width: 1190px){
-  
+  section.header {
+  	&.block {
+  		padding-top: 40px;
+  	}
+  	.header__img {
+  		width: 820px;
+  		top: -25px;
+  	}
+  	.header__prod {
+  		top: 200px;
+  	}
+  }
 }
 @media screen and (max-width: 1023px){
+	section.header {
+		&.block {
+			padding-bottom: 30px;
+			padding-top: 20px;
+		}
+		.before {
+			display: none;
+		}
+		.header__content {
+			padding-bottom: 0px;
+		}
+		.form {
+			margin-top: 30px;
+		}
+		.header__prod {
+			max-width: 200px;
+		}
 
+	}
 }
 @media screen and (max-width: 767px){
-
+	section.header {
+		&.block {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		.nav__list {
+			padding-top: 0;
+		}
+	}
 }
 @media screen and (max-width: 479px){
-
+	section.header.block {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
 }
