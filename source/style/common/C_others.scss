@@ -1,5 +1,64 @@
 .most-dangerous {
-    background: url('../img/others-bg.jpg') 0 0 no-repeat;
+    position: relative;
+    z-index: 0;
+    padding: 126px 0 159px;
+    background: url('../img/header__bg.jpg') 54% 0 no-repeat;
+    background-size: cover;
+
+    .before {
+        width: 110%;
+        height: 100px;
+        position: absolute;
+        top: -40px;
+        transform: rotate(-0.6deg);
+        left: -5px;
+        overflow: hidden;
+        z-index: 2;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            background-image: url(../img/pattern.png);
+            background-position: 0 0;
+            top: -38px;
+            -webkit-transform: rotate(-1deg);
+            -ms-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+            left: 0;
+        }
+    }
+
+    .after {
+        width: 105%;
+        height: 100px;
+        position: absolute;
+        bottom: -81px;
+        transform: rotate(-1.1deg);
+        left: 0;
+        overflow: hidden;
+
+        &::before {
+            height: 150%;
+            width: 150%;
+            top: -50px;
+            left: 0;
+            content: '';
+            display: block;
+            position: absolute;
+            background-image: url(../img/pattern.png);
+            background-position: 0 -7px;
+            -webkit-transform: rotate(1.1deg);
+            -ms-transform: rotate(1.1deg);
+            transform: rotate(1.1deg);
+        }
+    }
+}
+
+.most-dangerous__title {
+    color: #fff;
 }
 
 .most-dangerous__accent {
@@ -10,17 +69,17 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 87px 0 60px;
+    margin: 89px 0 60px;
     counter-reset: most-dangerous;
 }
 
 .most-dangerous__item {
     display: flex;
     align-items: flex-start;
-    width: 565px;
+    width: 49%;
 
     &:nth-child(n+3) {
-        margin-top: 48px;
+        margin-top: 52px;
     }
 }
 
@@ -170,17 +229,186 @@
 }
 
 @media screen and (max-width: 1190px){
+
+    .most-dangerous__item_ltr {
+
+        .most-dangerous__desc {
+            padding-left: 30px;
+        }
+    }
+
+    .most-dangerous__item_rtl {
+
+        .most-dangerous__desc {
+            padding-right: 30px;
+        }
+    }
   
+    .most-dangerous__pic {
+        width: 230px;
+    }
+
+    .most-dangerous__desc-title {
+        margin-bottom: 10px;
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .most-dangerous__desc-text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .most-dangerous__footnote {
+        font-size: 27px;
+        line-height: 27px;
+    }
+
 }
 
 @media screen and (max-width: 1023px){
+
+    .most-dangerous {
+
+        .before {
+            display: none;
+        }
+
+        .after {
+            display: none;
+        }
+    }
+
+    .most-dangerous__list {
+        margin: 55px 0 30px;
+    }
+
+    .most-dangerous__item {
+        flex-direction: column;
+        align-items: center;
+
+        &:nth-child(n+3) {
+            margin-top: 60px;
+        }
+    }
+
+    .most-dangerous__item_ltr {
+
+        .most-dangerous__desc {
+            padding-left: 0;
+        }
+    }
+
+    .most-dangerous__item_rtl {
+
+        .most-dangerous__wrap-pic {
+            order: 1;
+        }
+
+        .most-dangerous__pic {
+
+            &::after {
+                left: 50%;
+                transform: rotate(270deg) translateX(50%) translateY(-25%);
+            }
+        }
+
+        .most-dangerous__desc {
+            padding-right: 0;
+            order: 2;
+            text-align: center;
+        }
+    }
+
+    .most-dangerous__desc {
+        text-align: center;
+    }
+
+    .most-dangerous__desc-title {
+        margin-bottom: 5px;
+    }
+
+    .most-dangerous__wrap-pic {
+        margin-bottom: 20px;
+    }
+
+    .most-dangerous__pic {
+
+        &::after {
+            top: 100%;
+            left: 50%;
+            transform: translateX(-25%) translateY(-25%) rotate(90deg);
+        }
+    }
+
+    .most-dangerous__divider {
+        margin-bottom: 35px;
+    }
+
+    .most-dangerous__footnote {
+        font-size: 25px;
+        line-height: 25px;
+        margin: 0 auto 20px;
+    }
 
 }
 
 @media screen and (max-width: 767px){
 
+    .most-dangerous__list {
+        margin: 55px 0 20px;
+    }
+
+    .most-dangerous__pic {
+        width: 200px;
+    }
+
+    .most-dangerous__desc-title {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .most-dangerous__desc-text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .most-dangerous__divider {
+        margin-bottom: 30px;
+    }
+
+    .most-dangerous__footnote {
+        margin: 0 auto 15px;
+        font-size: 20px;
+        line-height: 22px;
+    }
+
 }
 
 @media screen and (max-width: 479px){
+
+    .most-dangerous__item {
+        width: 100%;
+
+        &:nth-child(n+2) {
+            margin-top: 60px;
+        }
+    }
+
+    .most-dangerous__wrap-pic {
+        margin-bottom: 10px;
+    }
+
+    .most-dangerous__pic {
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .most-dangerous__footnote {
+        font-size: 16px;
+        line-height: 18px;
+    }
 
 }
