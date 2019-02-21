@@ -296,6 +296,8 @@ function postDate() {
 
 
  $(function() {
+
+    // задаємо слайдам (сусідам центрального) класи
      var rev = $('.reviews__list');
     rev.on('init', function(event, slick, currentSlide) {
       var
@@ -323,7 +325,18 @@ function postDate() {
       slick.$next = next;
       cur.removeClass('slick-next').removeClass('slick-sprev');
     });
+    // лічильник слайдів
+     var sliderCountCur = $('.reviews__count-cur');
+     var sliderCountTotal = $('.reviews__count-total');
+        rev.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+          var i = (currentSlide ? currentSlide : 0) + 1;
+          sliderCountCur.text(i);
+          sliderCountTotal.text(slick.slideCount);
 
+
+        });
+
+        // налаштування слайдера
     rev.slick({
       speed: 1000,
       arrows: true,
@@ -337,6 +350,7 @@ function postDate() {
       swipe: true,
       infinite: false,
     });
+     
  });
 
 
