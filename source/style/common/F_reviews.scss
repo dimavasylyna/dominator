@@ -1,5 +1,78 @@
 .reviews {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	&__item {
+		// padding: 100px 0;
+	    margin: 0 2px;
+	    width: 460px;
+	    position: relative;
+	    margin-top: 40px;
+	    max-width: 460px;
+	}
+	&__box {
+		padding: 19px 35px;
+		max-height: 235px;
+		min-height: 100px;
+		background-color: #fff;
+		overflow: hidden;
+		transition: 0.3s;
+	}
+	&__head {
+		display: flex;
+		align-items: center;
+	}
+	&__name {
+		font-size: 20px;
+		color: #000;
+	}
+	&__quote {
+		font-size: 18px;
+		color: #666;
+		font-style: italic;
+		line-height: 1;
+	}
+	&__text {
+		font-size: 18px;
+		color: #444;
+		line-height: 28px;
+	}
+	.slick-list {
+		height: auto!important;
+		width: 1250px;
+	}
+	.slick-current {
+		z-index: 5;
+		position: relative;
+		.reviews__box {
+			position: relative;
+			opacity: 1;
+			width: 570px;
+			max-height: 2000px;
+			// transition: 0.4s;
+			min-height: 305px;
+		}
+	}
 
+.slick-slide {
+	opacity: 0;
+	transition: 0.7s;
+	outline: none;
+}
+.slick-current {
+	opacity: 1;
+	transition: none;
+}
+.slick-snext {
+	opacity: 0.35;
+	transform: translateX(-20%);
+}
+.slick-sprev {
+	opacity: 0.35;
+	transform: translateX(20%);
+}
+.slick-arrow {
+	top: 200px;
+}
 }
 @media screen and (max-width: 1190px){
   

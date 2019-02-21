@@ -270,3 +270,74 @@ function postDate() {
 
 
 
+// $(document).ready(function(){
+//   $('.reviews__list').slick({
+//     slidesToShow: 2,
+//     dots: true,
+//     centerMode: true,
+//     infinite: false,
+//     touchMove: false,
+//     initialSlide: 1,
+//     // centerPadding: '100px',
+//     variableWidth: true,
+//      responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//         dots: false
+//         // infinite: true
+//       }
+//     }
+//     ]
+//   });
+// });
+
+
+ $(function() {
+     var rev = $('.reviews__list');
+    rev.on('init', function(event, slick, currentSlide) {
+      var
+        cur = $('.reviews .slick-current'),
+        next = cur.next(),
+        prev = cur.prev();
+      prev.addClass('slick-sprev');
+      next.addClass('slick-snext');
+      cur.removeClass('slick-snext').removeClass('slick-sprev');
+      slick.$prev = prev;
+      slick.$next = next;
+    });
+    rev.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+      var
+        cur = $(slick.$slides[nextSlide]);
+      slick.$prev.removeClass('slick-sprev');
+      slick.$next.removeClass('slick-snext');
+      next = cur.next(),
+        prev = cur.prev();
+      prev.prev();
+      prev.next();
+      prev.addClass('slick-sprev');
+      next.addClass('slick-snext');
+      slick.$prev = prev;
+      slick.$next = next;
+      cur.removeClass('slick-next').removeClass('slick-sprev');
+    });
+
+    rev.slick({
+      speed: 1000,
+      arrows: true,
+      dots: false,
+      infinite: true,
+      centerMode: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerPadding: '0',
+      variableWidth: true,
+      swipe: true,
+      infinite: false,
+    });
+ });
+
+
+
