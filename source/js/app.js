@@ -296,6 +296,8 @@ function postDate() {
 
 
  $(function() {
+    // другий слайд робимо поточним
+    $('.reviews').find('slick-current').removeClass('.slick-current');
 
     // задаємо слайдам (сусідам центрального) класи
      var rev = $('.reviews__list');
@@ -325,16 +327,35 @@ function postDate() {
       slick.$next = next;
       cur.removeClass('slick-next').removeClass('slick-sprev');
     });
+    
+
     // лічильник слайдів
-     var sliderCountCur = $('.reviews__count-cur');
-     var sliderCountTotal = $('.reviews__count-total');
-        rev.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-          var i = (currentSlide ? currentSlide : 0) + 1;
-          sliderCountCur.text(i);
-          sliderCountTotal.text(slick.slideCount);
+     rev.on('init', function(event, slick){
+      slideCount = slick.slideCount;
+      setSlideCount();
+      setCurrentSlideNumber(slick.currentSlide);
+    });
+
+    rev.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      setCurrentSlideNumber(nextSlide);
+    });
+
+    function setSlideCount() {
+      var el = $('.reviews__count-total');
+      el.text(slideCount);
+    }
+
+    function setCurrentSlideNumber(currentSlide) {
+      var el = $('.reviews__count-cur');
+      el.text(currentSlide + 1);
+    }
 
 
-        });
+
+    // фікс для бескінечного циклу
+    rev.on('afterChange', function(event, slick, currentSlide, nextSlide) {
+      $('.slick-slide[data-slick-index=' + currentSlide + ']').addClass('slick-slide-active');
+    })
 
         // налаштування слайдера
     rev.slick({
@@ -349,6 +370,7 @@ function postDate() {
       variableWidth: true,
       swipe: true,
       infinite: false,
+      initialSlide: 1,
     });
      
  });

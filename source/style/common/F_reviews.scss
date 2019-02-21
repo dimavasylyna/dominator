@@ -1,9 +1,10 @@
 .reviews {
-	padding-top: 100px;
+	padding-top: 12px;
 	padding-bottom: 100px;
+	&__list {
+		margin-top: 40px;
+	}
 	&__item {
-		// padding: 100px 0;
-	    margin: 0 2px;
 	    width: 460px;
 	    position: relative;
 	    margin-top: 40px;
@@ -11,65 +12,107 @@
 	}
 	&__box {
 		padding: 19px 35px;
-		max-height: 235px;
-		min-height: 100px;
+		height: 248px;
+		// min-height: 100px;
 		background-color: #fff;
 		overflow: hidden;
-		transition: 0.3s;
+		transition:  0.7s;
 	}
 	&__head {
 		display: flex;
 		align-items: center;
 	}
+	&__img {
+		height: 100px;
+		width: 100px;
+		overflow: hidden;
+		border-radius: 50%;
+		margin-right: 28px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__head-text {
+		margin-bottom: auto;
+		max-width: 260px;
+		margin-top: 29px;
+	}
 	&__name {
 		font-size: 20px;
 		color: #000;
+		margin-bottom: 9px;
 	}
 	&__quote {
 		font-size: 18px;
 		color: #666;
 		font-style: italic;
 		line-height: 1;
+		letter-spacing: -0.5px;
 	}
 	&__text {
 		font-size: 18px;
 		color: #444;
 		line-height: 28px;
+		margin-top: 15px;
 	}
 	.slick-list {
 		height: auto!important;
 		width: 1250px;
+		position: relative;
+		right: 40px;
+		// outline: 2px solid red;
 	}
 	.slick-current {
 		z-index: 5;
 		position: relative;
 		.reviews__box {
+			padding-top: 25px;
+			padding-left: 31px;
 			position: relative;
 			opacity: 1;
 			width: 570px;
+			height: auto;
 			max-height: 2000px;
 			min-height: 305px;
+			transform: translateX(-55px);
+		}
+		.reviews__img {
+			margin-right: 35px;
+		}
+		.reviews__head-text {
+			max-width: 380px;
+			margin-top: 26px;
+		}
+		.reviews__name {
+			font-size: 22px;
+		}
+		.reviews__text {
+			margin-top: 14px;
 		}
 	}
 	.slick-slide {
 		opacity: 0;
-		transition: 0.7s;
+		transition:  0.7s;
 		outline: none;
 	}
 	.slick-current {
 		opacity: 1;
 		transition: none;
+		transform: translateY(-30px);
 	}
 	.slick-snext {
 		opacity: 0.35;
-		transform: translateX(-20%);
+		transform: translateX(-14%);
 	}
 	.slick-sprev {
 		opacity: 0.35;
-		transform: translateX(20%);
+		transform: translateX(14%);
+
 	}
 	.slick-arrow {
 		top: 200px;
+		z-index: 20;
 	}
 	&__count {
 		margin-left: auto;
