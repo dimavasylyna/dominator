@@ -1,6 +1,19 @@
 .order {
+  position: relative;
   padding-top: 75px;
   padding-bottom: 55px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      content: '';
+      display: block;
+      width: 1170px;
+      height: 1px;
+      transform: translateX(-50%);
+      background-color: #c7c7c7;
+    }
 
   &__title {
     margin-bottom: 30px;

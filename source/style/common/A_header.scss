@@ -350,6 +350,8 @@
 }
 @media screen and (max-width: 767px){
 	.header {
+		margin-bottom: 20px;
+
 		&__top {
 			flex-wrap: wrap;
 			justify-content: space-around;

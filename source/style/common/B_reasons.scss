@@ -1,6 +1,13 @@
 .reasons {
-  padding-top: 90px;
+  padding-top: 20px;
   padding-bottom: 60px;
+
+  &.block {
+    @media screen and (max-width: 1190px) {
+        padding-top: 0;
+    }
+  }
+  
 
   &__title {
     margin-bottom: 15px;
