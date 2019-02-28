@@ -241,6 +241,18 @@ input::-ms-clear {
   justify-content: space-between;
   max-width: 224px;
   margin-left: auto;
+  position: relative;
+  &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 50px;
+      right: 50%;
+      top: 2px;
+      background-color: #d1d0d0;
+      transform: translateX(-50%);
+    }
   &__box {
     display: flex;
     flex-direction: column;
@@ -249,16 +261,8 @@ input::-ms-clear {
     color: #a2a1a1;
     font-weight: 400;
     position: relative;
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 1px;
-      height: 50px;
-      right: -18px;
-      top: 2px;
-      background-color: #d1d0d0;
-    }
+    margin-left: auto;
+    margin-right: 10px;
     .price__text {
       font-size: 13px;
     }
@@ -267,6 +271,22 @@ input::-ms-clear {
     }
     .price__number {
       font-size: 28px;
+       position: relative;
+      &::before,
+      &::after {
+      	content: '';
+      	display: block;
+      	position: absolute;
+      	width: 110%;
+      	height: 1px;
+      	background-color: #ef694b;
+      	transform: rotate(-19deg);
+      	left: 0;
+      	top: 45%;
+      }
+      &::after {
+      	transform: rotate(19deg);
+      }
     }
     .price__currency {
       font-size: 16px;
@@ -275,6 +295,7 @@ input::-ms-clear {
   &__box--new {
     color: $text-red;
      font-weight: 500;
+     margin-left: auto;
     .price__text {
       font-size: 14px;
     }
@@ -284,6 +305,7 @@ input::-ms-clear {
       line-height: 1.1;
       letter-spacing: -1.5px;
       margin-right: 2px;
+
     }
     .price__currency {
       font-size: 18px;
