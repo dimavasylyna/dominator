@@ -433,13 +433,18 @@
         }
     }
 
+    .most-dangerous__bottom {
+        padding: 25px 0 25px;
+    }
+
     .most-dangerous__footnote {
+        text-align: center;
         font-size: 16px;
         line-height: 18px;
     }
 
-    .most-dangerous__bottom {
-        padding: 25px 0 25px;
+    .most-dangerous__btn {
+        margin: 0 auto;
     }
 
 }
