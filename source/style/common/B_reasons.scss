@@ -1,36 +1,40 @@
 .reasons {
-  padding-top: 20px;
-  padding-bottom: 60px;
+  padding-top: 16px;
+  padding-bottom: 70px;
 
   &.block {
     @media screen and (max-width: 1190px) {
         padding-top: 0;
     }
   }
-  
 
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: 900;
 
-    & br {
-      display: none;
-
-      @media (min-width: 768px) and (max-width: 1024px) {
-        display: initial;
-      }
+    @media (min-width: 1920px) {
+      padding-left: 18px;
     }
   }
 
   &__subtitle {
-    margin-bottom: 37px;
+    margin-bottom: 39px;
     font-weight: 500;
+
+    @media (min-width: 1920px) {
+      margin-left: -5px;
+      font-size: 26px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    
+    @media (min-width: 1920px) {
+      padding-left: 1px;
+    }
 
     @media (max-width: 1024px) {
       flex-wrap: wrap;
@@ -45,7 +49,7 @@
 
   &__item {
     &:nth-child(2n) {
-      margin-top: 25px;
+      margin-top: 50px;
 
       @media (max-width: 1024px) {
         margin-top: 0;
@@ -72,6 +76,7 @@
     position: absolute;
     top: 0;
     left: 50%;
+    left: calc(50% + 3px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +86,7 @@
     line-height: 1;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
     transform: translateX(-50%);
 
     &--triangle {
@@ -93,7 +98,7 @@
 
     &--ruler {
       width: 46px;
-      height: 50px;
+      height: 46px;
       padding-top: 5px;
       background-image: url("../img/reason-icon-ruler.svg");
     }
@@ -105,6 +110,7 @@
     }
 
     &--talk {
+      top: 4px;
       width: 49px;
       height: 42px;
       background-image: url("../img/reason-icon-talk.svg");
@@ -120,7 +126,7 @@
 
   &__description {
     position: relative;
-    padding-top: 18px;
+    padding-top: 16px;
     font-weight: 500;
     text-align: center;
 
@@ -146,8 +152,8 @@
 
   &__conclusion {
     position: relative;
-    margin-bottom: 26px;
-    padding-top: 46px;
+    margin-bottom: 29px;
+    padding-top: 47px;
     overflow: hidden;
 
     &::before,
@@ -156,8 +162,12 @@
       position: absolute;
       top: 0;
       width: calc(50% - 17px);
-      height: 1px;
-      background-color: #c1c1c1;
+      height: 0;
+      border-top: 1px solid #c1c1c1;
+
+      @media (min-width: 2560px) {
+        border-top-width: 2px;
+      }
     }
 
     &::before {
