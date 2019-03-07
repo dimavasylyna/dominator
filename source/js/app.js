@@ -1,8 +1,12 @@
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
 
+    // додаю додаткові обчислення для оффсету - див. правку №1
+    // https://jira.everad.group/browse/PROD-3515?focusedCommentId=77634&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-7763
+    var offset = 40;
+
     $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
+        scrollTop: $($.attr(this, 'href')).offset().top - offset
     }, 1000);
 });
 
