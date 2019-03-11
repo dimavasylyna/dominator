@@ -381,7 +381,7 @@ function postDate() {
       centerPadding: '0',
       variableWidth: true,
       swipe: true,
-    //   infinite: false,
+      infinite: false,
       initialSlide: 1,
       responsive: [
         {

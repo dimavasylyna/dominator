@@ -4,7 +4,10 @@
 	position: relative;
 	z-index: 2;
 	&__list {
-		margin-top: 20px;
+		// margin-top: 20px;
+		@media (min-width: 1200px) {
+			margin-top: 20px;
+		}
 	}
 	&__item {
 	    width: 460px;
@@ -117,6 +120,7 @@
 		}
 		.reviews__text {
 			margin-top: 14px;
+			padding-left: 10px;
 			padding-right: 10px;
 			&--hide {
 				display: inline;
@@ -204,7 +208,7 @@
 		i {
 			position: relative;
 			&::before {
-				content: '*';
+				// content: '*';
 				position: absolute;
 				left: -10px;
 				top: -9px;
@@ -212,6 +216,14 @@
 				font-size: 18px;
 				line-height: 1;
 			}
+		}
+		& .asterisk {
+			display: inline-block;
+			width: 15px;
+			margin-right: 2px;
+			color: #ef694b;
+			font-size: 18px;
+			line-height: 1;
 		}
 	}
 	.btn {
@@ -255,7 +267,7 @@
   	}
   	&__box {
   		height: 220px;
-  		padding-right: 10px;
+			padding-right: 10px;
   	}
   	.slick-current {
   		transform: translateY(-20px);
@@ -305,7 +317,8 @@
 			    min-height: 230px;
 			    transform: none;
 			    padding-top: 20px;
-			    padding-left: 25px;
+					padding-left: 25px;
+					padding-left: 10px;
 			    width: auto;
 			    height: auto;
 			}
@@ -406,5 +419,22 @@
 		.slick-arrow {
 			top: 142px;
 		}
+	}
+}
+
+@media (min-width: 999px) {
+	.reviews__text {
+		padding: 0 !important;
+	}
+
+	.reviews__box {
+		padding-left: 35px !important;
+		padding-right: 35px !important;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1190px) {
+	.reviews.block {
+			padding-top: 0;
 	}
 }
