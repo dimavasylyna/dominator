@@ -1,5 +1,5 @@
 .actor {
-	padding-top: 140px;
+	padding-top: 105px;
 	padding-bottom: 180px;
 	background-image: linear-gradient(to right, rgba(34,34,34,0) 0%,rgba(34,34,34,1) 95%,rgba(34,34,34,1) 200%), url(../img/header__bg.jpg);
 	background-repeat: no-repeat;
@@ -124,7 +124,7 @@
 @media screen and (max-width: 1190px){
   .actor {
   	&.block {
-  		padding-bottom: 115px;
+  		padding-bottom: 140px;
   	}
 	.title {
 		max-width: 590px;
@@ -136,7 +136,7 @@
 	&__img {
 		max-width: 400px;
 		left: 10px;
-		bottom: -50px;
+		bottom: -95px;
 	}
 	&__text {
 		max-width: 590px;
