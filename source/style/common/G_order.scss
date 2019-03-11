@@ -1,7 +1,7 @@
 .order {
   position: relative;
-  padding-top: 75px;
-  padding-bottom: 55px;
+  padding-top: 77px;
+  padding-bottom: 58px;
 
     &::before {
       position: absolute;
@@ -16,7 +16,7 @@
     }
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 37px;
 
     @media (max-width: 767px) {
       & br {
@@ -117,7 +117,7 @@
         content: "";
         position: absolute;
         top: 14px;
-        right: 80px;
+        right: 89px;
         width: 54px;
         height: 48px;
         background-image: url("../img/order-check.svg");
@@ -135,14 +135,14 @@
     width: 250px;
     height: 250px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     background-color: white;
     border: 10px solid #bfbebe;
     border-radius: 50%;
   }
 
   &__caption {
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
     font-size: 22px;
     line-height: 30px;
 
@@ -174,6 +174,11 @@
       height: 4px;
       background-color: $text-yellow;
       transform: translateX(-50%);
+    }
+
+    &--02 {
+      margin-top: 12px;
+      padding-top: 15px;
     }
   }
 }

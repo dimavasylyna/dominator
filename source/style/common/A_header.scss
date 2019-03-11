@@ -5,6 +5,7 @@
 	background-repeat: no-repeat;
 	background-position: 59% 12%, 49% -24px;
 	margin-bottom: 40px;
+	padding-top: 6px;
 	// margin-bottom: 300px;
 	position: relative;
 	z-index: 0;
@@ -34,7 +35,7 @@
 	&__top {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 39px;
+		margin-bottom: 36px;
 	}
 	.logo {
 	  display: flex;
@@ -49,7 +50,8 @@
 	  	width: 67px;
 		height: 87px;
 		position: absolute;
-		left: -2px;
+		// left: -2px;
+		left: 0;
 		top: -15px;
 	  svg {
 	  	max-width: 100%;
@@ -80,7 +82,7 @@
 	.nav__list {
 		display: flex;
 		justify-content: space-between;
-		padding-top: 21px;
+		padding-top: 25px;
 		align-items: flex-start;
 	}
 	.nav__item {

@@ -79,18 +79,28 @@
     width: 49%;
 
     &:nth-child(n+3) {
-        margin-top: 52px;
+        margin-top: 48px;
     }
 }
 
 .most-dangerous__item_ltr {
+    padding-top: 2px;
+    padding-left: 2px;
+
+    &:nth-of-type(2n) {
+        padding-left: 4px;
+    }
 
     .most-dangerous__desc {
-        padding-left: 50px;
+        padding-left: 40px;
     }
 }
 
 .most-dangerous__item_rtl {
+    padding-right: 1px;
+    &:nth-of-type(2n) {
+        padding-right: 0;
+    }
 
     .most-dangerous__desc {
         padding-right: 50px;
@@ -116,6 +126,7 @@
         position: absolute;
         top: -49px;
         left: 50%;
+        left: calc(50% + 7px);
         transform: translateX(-50%);
         content: counter(most-dangerous);
         counter-increment: most-dangerous;
@@ -135,6 +146,7 @@
     &::before {
         position: absolute;
         content: '';
+        top: -4px;
         display: block;
         width: 100%;
         height: 4px;
@@ -157,14 +169,16 @@
 .most-dangerous__img {
     display: block;
     max-width: 100%;
+    margin-top: 4px;
 }
 
 .most-dangerous__desc {
     align-self: center;
+    // padding-top: 46px;
 }
 
 .most-dangerous__desc-title {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 24px;
     line-height: 24px;
     font-weight: 500;
@@ -183,7 +197,7 @@
 }
 
 .most-dangerous__bottom {
-    padding: 110px 0 100px;
+    padding: 77px 0 95px;
     background-color: #333;
     transform: skewY(-1deg);
 
@@ -205,12 +219,23 @@
     line-height: 30px;
     font-weight: 700;
     color: #dfe4ea;
+
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+
 }
 
 .most-dangerous__btn {
     flex-shrink: 0;
-    max-width: 281px;
+    flex-grow: 1;
+    max-width: 310px;
     text-align: center;
+    margin-top: 5px;
+
+    @media (max-width: 767px) {
+        margin: 0 auto;
+    }
 
     .btn {
         max-width: 100%;
