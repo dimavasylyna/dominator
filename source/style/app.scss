@@ -245,7 +245,8 @@ input::-ms-clear {
   display: flex;
   justify-content: space-between;
   max-width: 224px;
-  margin-left: auto;
+  // margin-left: auto;
+  margin: 0 auto;
   position: relative;
   &::before {
       content: '';
@@ -253,7 +254,7 @@ input::-ms-clear {
       position: absolute;
       width: 1px;
       height: 50px;
-      right: 50%;
+      left: 50%;
       top: 2px;
       background-color: #d1d0d0;
       transform: translateX(-50%);
@@ -261,13 +262,15 @@ input::-ms-clear {
   &__box {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 50%;
   }
   &__box--old {
     color: #a2a1a1;
     font-weight: 400;
     position: relative;
-    margin-left: auto;
-    margin-right: 10px;
+    // margin-left: auto;
+    // margin-right: 10px;
     .price__text {
       font-size: 13px;
     }
@@ -300,7 +303,7 @@ input::-ms-clear {
   &__box--new {
     color: $text-red;
      font-weight: 500;
-     margin-left: auto;
+    //  margin-left: auto;
     .price__text {
       font-size: 14px;
     }
@@ -309,7 +312,7 @@ input::-ms-clear {
       font-size: 40px;
       line-height: 1.1;
       letter-spacing: -1.5px;
-      margin-right: 2px;
+      // margin-right: 2px;
 
     }
     .price__currency {

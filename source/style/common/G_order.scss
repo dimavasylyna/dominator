@@ -146,7 +146,7 @@
     line-height: 26px;
 
     @media (max-width: 1190px) {
-      padding-top: 16px;
+      padding-top: 9px;
       font-size: 16px;
       line-height: 21px;
     }
@@ -163,8 +163,13 @@
     }
 
     &--02 {
-      margin-top: 12px;
-      padding-top: 15px;
+      margin-top: 0;
+      padding-top: 9px;
+
+      @media (min-width: 1190px) {
+        margin-top: 12px;
+        padding-top: 15px;
+      }
     }
   }
 }

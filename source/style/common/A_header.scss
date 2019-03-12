@@ -199,12 +199,15 @@
 			display: block;
 			position: absolute;
 			background-image: url(../img/form-line.svg);
-			background-position: 50%;
-			width: 230px;
+			background-position: left -2px center;
+			width: 100%;
+			max-width: 230px;
 			height: 20px;
 			background-repeat: no-repeat;
 			bottom: -23px;
-			left: -7px;
+			// left: -7px;
+			left: 50%;
+			transform: translate(-50%);
 		}
 	}
 	&__prod {
