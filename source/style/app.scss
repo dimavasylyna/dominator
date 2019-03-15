@@ -10,6 +10,9 @@ $text-gray: #444444;
 * {
   box-sizing: border-box;
 }
+html {
+  overflow-x: hidden;
+}
 html, body {
   padding: 0;
   margin: 0;
@@ -20,8 +23,9 @@ html, body {
   font-size: 20px;
   line-height: 1.2;
   box-sizing: border-box;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
+
 body {
   background-image: url(../img/pattern.png);
 }
@@ -365,8 +369,11 @@ input::-ms-clear {
 }
 
 
-@import "common/slick.scss";
-@import "common/slick-theme.scss";
+// @import "common/slick.scss";
+// @import "common/slick-theme.scss";
+@import "common/owl.carousel.min.scss";
+@import "common/owl.theme.default.min.scss";
+// @import "common/animate.scss";
 @import "common/A_header.scss";
 @import "common/B_reasons.scss";
 @import "common/C_others.scss";
@@ -377,6 +384,7 @@ input::-ms-clear {
 @import "common/H_header-bottom.scss";
 @import "common/I_footer.scss";
 @import "common/J_popup.scss";
+@import "common/owl.theme.custom.scss"; // last!!!
 
 
 

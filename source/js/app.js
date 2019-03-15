@@ -307,7 +307,7 @@ function postDate() {
 // });
 
 
- $(function() {
+ /* $(function() {
     // другий слайд робимо поточним
     $('.reviews').find('slick-current').removeClass('.slick-current');
 
@@ -381,7 +381,7 @@ function postDate() {
       centerPadding: '0',
       variableWidth: true,
       swipe: true,
-      infinite: false,
+    //   infinite: false,
       initialSlide: 1,
       responsive: [
         {
@@ -395,7 +395,49 @@ function postDate() {
         }]
     });
      
- });
+ }); */
+
+$(function() {
+    var $owl = $('.reviews__list');
+
+    $('.reviews__list').find('.reviews__item').each(function(index, elem) {
+        $(elem).attr('data-count', index + 1);
+    });
+
+    $owl.on('initialized.owl.carousel', function(evt) {
+        $('.reviews__count-cur').html(
+            $('.owl-item.center .reviews__item').attr('data-count')
+        );
+        $('.reviews__count-total').html(evt.item.count);
+        $('.owl-item.center').css(
+            'height',
+            $(this)
+        );
+    });
+
+    $owl.on('translated.owl.carousel', function() {
+        $('.reviews__count-cur').html(
+            $('.owl-item.center .reviews__item').attr('data-count')
+        );
+    });
+
+    $owl.owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        center: true,
+        startPosition: 2,
+        responsive: {
+            0: {
+                items: 1
+            },
+            1024: {
+                items: 3
+            }
+        }
+    })
+});
 
 
 

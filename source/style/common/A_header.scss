@@ -231,9 +231,12 @@
   	height: 830px;
     width: 540px;
     position: absolute;
-    bottom: 53px;
-    left: calc(50% + 80px);
-	transform: translateX(-50%);
+		bottom: 53px;
+		left: 0;
+    // left: calc(50% + 80px);
+	// transform: translateX(-50%);
+	bottom: 58px;
+    left: 638px;
 	z-index: -1;
 	}
 	&__woman {
@@ -241,8 +244,8 @@
 	    width: 401px;
 	    position: absolute;
 	    bottom: -43px;
-	    left: 50%;
-		transform: translateX(-50%);
+	    // left: 50%;
+		// transform: translateX(-50%);
 		z-index: -1;
 	}
 	
