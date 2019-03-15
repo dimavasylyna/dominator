@@ -4,6 +4,10 @@
 	position: relative;
 	z-index: 2;
 
+	@media (min-width: 2560px) {
+		padding-top: 50px;
+	}
+
 	&__title {
 		margin-bottom: 15px;
 
