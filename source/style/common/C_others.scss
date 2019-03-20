@@ -7,54 +7,63 @@
     background-size: cover;
 
     &__before {
-		position: absolute;
-		top: -5px;
-		left: 0;
-		width: 100%;
-		height: 70px;
-		overflow: hidden;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 70px;
+        overflow: hidden;
 
-		@media (min-width: 2561px) {
+        &::after {
+            content: "";
+            position: absolute;
+            top: -70px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: skewY(-1.5deg);
+            transform-origin: bottom right;
+            background-image: url(../img/pattern.png);
+            background-position: center;
+        }
+    }
+
+    &__after {
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 70px;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: skewY(-1.5deg);
+            transform-origin: top right;
+            background-image: url(../img/pattern.png);
+            background-position: center;
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        &__before,
+        &__after {
+            display: block;
+        }
+    }
+
+    @media (min-width: 2561px) {
+		&__before,
+		&__after {
 			display: none;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			top: -70px;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			transform: skewY(-1.5deg);
-			transform-origin: bottom right;
-			background-image: url(../img/pattern.png);
-	    background-position: center;
-		}
-	}
-
-	&__after {
-		position: absolute;
-		bottom: -35px;
-		left: 0;
-		width: 100%;
-		height: 70px;
-		overflow: hidden;
-
-		@media (min-width: 2561px) {
-			display: none;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			transform: skewY(-1.5deg);
-			transform-origin: top right;
-			background-image: url(../img/pattern.png);
-	    background-position: center;
 		}
 	}
 
@@ -151,6 +160,7 @@
 
 .most-dangerous__item_rtl {
     padding-right: 1px;
+
     &:nth-of-type(2n) {
         padding-right: 0;
     }
@@ -253,13 +263,14 @@
     padding: 70px 0 95px;
     background-color: #333;
     transform: skewY(-1.5deg);
-    
+
     .container {
         transform: skewY(1.5deg);
     }
-    
+
     @media (min-width: 2561px) {
         transform: skewY(0);
+
         .container {
             transform: skewY(0);
         }
@@ -311,7 +322,7 @@
     color: #e7bc85;
 }
 
-@media screen and (max-width: 1190px){
+@media screen and (max-width: 1190px) {
 
     .most-dangerous {
         &.block {
@@ -336,7 +347,7 @@
             padding-right: 30px;
         }
     }
-  
+
     .most-dangerous__pic {
         width: 230px;
     }
@@ -363,7 +374,7 @@
 
 }
 
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 1023px) {
 
     .most-dangerous {
 
@@ -452,14 +463,14 @@
     .most-dangerous__bottom {
         padding: 30px 0 30px;
         transform: skewY(0);
-        
+
         .container {
             transform: skewY(0);
         }
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
 
     .most-dangerous {
 
@@ -502,7 +513,7 @@
 
 }
 
-@media screen and (max-width: 479px){
+@media screen and (max-width: 479px) {
 
     .most-dangerous__item {
         width: 100%;
